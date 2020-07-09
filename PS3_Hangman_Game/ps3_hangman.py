@@ -131,13 +131,13 @@ def hangman(secretWord):
     while numofGuesses > 0:
          print('You have '+str(numofGuesses)+' guesses left\n')
          avlblLetters = getAvailableLetters(lettersGuessed)
-         print('Available letters are : '+ avlblLetters+'\n')
+         print('Available Letters: '+ avlblLetters+'\n')
          guess = input (' Please guess a letter : ')
          guess_LC = guess.lower()
          if guess_LC not in lettersGuessed: 
             lettersGuessed.append(guess_LC)
             if guess_LC in secretWord:
-                print('Good Guess!: '+ getGuessedWord(secretWord, lettersGuessed)+'\n' )
+                print('Good Guess: '+ getGuessedWord(secretWord, lettersGuessed)+'\n' )
                 if isWordGuessed(secretWord,lettersGuessed):
                     print('Congratulations you won!\n')
                     break
